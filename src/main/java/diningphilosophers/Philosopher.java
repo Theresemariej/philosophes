@@ -40,7 +40,7 @@ public class Philosopher extends Thread {
                             think(); // pour augmenter la probabilité d'interblocage
                             if(myRightStick.tryTake()){
                                 System.out.println("M."+this.getName()+" a pris deux baguettes");
-                                 // Si on arrive ici, on a pu "tryTake" les 2 baguettes
+                                 // Si on arrive ici, on a pu prendre les 2 baguettes (tryTake() a retourné true les deux fois)
                                 eat();
                                // On libère les baguettes : 
                                 myLeftStick.release();
@@ -49,7 +49,7 @@ public class Philosopher extends Thread {
                         }
                         else{
                             myLeftStick.release();
-                             System.out.println("M."+this.getName()+" a relaché baguette du coté gauche");
+                             System.out.println("M."+this.getName()+" a relaché la baguette du coté gauche");
                 }
                       
                 
