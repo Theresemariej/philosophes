@@ -20,7 +20,7 @@ public class ChopStick {
             }
         }
         iAmFree = false; //dans tout les cas, la baguette est prise: 
-        //ou bien elle est déja prise, ou alors on la prends nous.
+        //ou bien elle est déja prise, ou bien alors on la prends nous.
         // Pas utile de faire notifyAll ici, personne n'attend qu'elle soit occupée
         return true; // Succès, on a pu prendre la baguette
     }
